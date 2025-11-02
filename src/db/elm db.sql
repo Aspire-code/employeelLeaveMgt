@@ -1,5 +1,5 @@
 
-USE elm
+
 
 -- USERS TABLE
 CREATE TABLE users (
@@ -53,7 +53,7 @@ VALUES
 (1226,'David Kim', 'david@company.com', 'hashedpassword', 'Employee'),
 (3122,'Emily Clark', 'emily@company.com', 'hashedpassword', 'Employee');
 
-SELECT * FROM users;
+
 
 INSERT INTO leavetype (leavetype, annuallimit, description) 
 VALUES

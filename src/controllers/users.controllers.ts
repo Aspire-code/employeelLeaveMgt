@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import * as userService from "../services/userService";
+import * as userService from "../services/users.services"
 
 export const createUser = async (req: Request, res: Response) => {
   try {
@@ -38,10 +38,10 @@ export const getUserById = async (req: Request, res: Response) => {
 };
 export const updateUser = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
-  const updates = req.body;
+  const user = req.body;
 
   try {
-    const result = await userService.updateUser(id, updates);
+    const result = await userService.updateUser(id, user);
     res.status(200).json(result);
   } catch (error: any) {
     if (error.message === "Invalid staffid") {
